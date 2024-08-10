@@ -1,0 +1,87 @@
+/* CreateDish.css */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.create-dish-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .create-dish-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-dish-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-dish-container label {
+    margin-bottom: 15px;
+  }
+  .create-dish-container label p {
+    margin-bottom: 5px;
+    text-align: start;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  .create-dish-container input[type="text"],
+  .create-dish-container input[type="number"],
+  .create-dish-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #FFC6C6;
+    border-radius: 5px;
+  }
+  
+  .create-dish-container input[type="file"] {
+    padding: 5px;
+  }
+  
+  .create-dish-container button {
+    padding: 10px 20px;
+    background-color: #DA7297;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-dish-container button:hover {
+    background-color: #218838;
+  }
+
+  .image-previews {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-previews img {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #select-type {
+    width: 100%;
+    padding: 10px 16px;
+    border: 2px solid #FFC6C6;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="%23333" d="M4 6l4 4 4-4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .choose-img {
+    margin-top: 60px;
+  }
+  

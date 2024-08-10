@@ -1,0 +1,111 @@
+/* Container chính của chi tiết món ăn */
+#dish-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Tiêu đề */
+  #dish-details-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Nội dung chính */
+  #dish-details-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Thông tin món ăn */
+  #dish-info {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  /* Container cho ảnh chi tiết */
+  #dish-images {
+    flex: 1;
+  }
+  
+  /* Mỗi mục chi tiết món ăn */
+  .dish-detail-item {
+    margin-bottom: 16px;
+  }
+  
+  /* Nhãn cho từng mục chi tiết */
+  .dish-detail-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 4px;
+  }
+  
+  /* Giá trị cho từng mục chi tiết */
+  .dish-detail-value {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Hình ảnh món ăn */
+  #dish-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+  
+  /* Container cho ảnh chi tiết */
+  .detail-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  /* Mỗi ảnh chi tiết */
+  .detail-image {
+    width: 100%;
+    max-width: 150px; /* Kích thước tối đa của ảnh chi tiết */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Container cho các nút hành động */
+  #dish-details-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  button a {
+    text-decoration: none;
+    color: white;
+  }
+  /* Các nút hành động */
+  .dish-action-button {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dish-action-button:hover {
+    background-color: #0056b3;
+  }
+  

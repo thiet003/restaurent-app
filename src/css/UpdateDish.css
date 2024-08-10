@@ -1,0 +1,152 @@
+/* EditDish.css */
+
+.edit-dish-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea,
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.option-buttons {
+  margin-bottom: 20px;
+}
+
+.option-buttons button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.option-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.thumbnail-section,
+.upload-section {
+  margin-top: 20px;
+}
+
+.thumbnail-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  margin-right: 10px;
+}
+
+.image-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.choose-img input {
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+/* EditDish.css */
+
+.thumbnail-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.image-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid transparent; /* Mặc định không có viền */
+  transition: border 0.3s;
+}
+
+.image-item.selected img {
+  border: 2px solid #007bff; /* Viền xanh khi chọn ảnh */
+}
+
+/* EditDish.css */
+
+.upload-section {
+  margin-top: 20px;
+}
+
+.choose-img {
+  margin-bottom: 10px;
+}
+
+.choose-img p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.choose-img input {
+  display: block;
+  margin-top: 5px;
+}
+
+.uploaded-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.uploaded-image {
+  width: 120px; /* Điều chỉnh kích thước ảnh nếu cần */
+  height: 120px; /* Điều chỉnh kích thước ảnh nếu cần */
+  object-fit: cover; /* Giữ tỷ lệ ảnh và cắt bớt nếu cần */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.uploaded-image:hover {
+  border-color: #007bff;
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+#nothing-btn {
+  background-color: green;
+}

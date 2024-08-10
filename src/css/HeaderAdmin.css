@@ -1,0 +1,93 @@
+/* Đặt toàn bộ nền của trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Định dạng header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 2px -2px gray;
+}
+
+/* Định dạng logo */
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo h1 a {
+    color: white;
+    text-decoration: none;
+}
+/* Định dạng phần navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Định dạng user info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    font-size: 18px;
+}
+
+/* Định dạng nút đăng xuất */
+.user-info button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-info button:hover {
+    background-color: #e60000;
+}
+
+/* Định dạng liên kết đăng nhập */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive: Đảm bảo layout vẫn đẹp trên màn hình nhỏ hơn */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .user-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-info button, nav a {
+        width: 100%;
+        text-align: center;
+    }
+}

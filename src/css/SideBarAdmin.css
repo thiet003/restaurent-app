@@ -1,0 +1,45 @@
+/* Căn chỉnh sidebar */
+.sidebar {
+    width: 250px; /* Đặt chiều rộng của thanh bên */
+    height: 100vh; /* Chiều cao đầy đủ của cửa sổ trình duyệt */
+    background-color: #C75B7A; /* Màu nền tối của thanh bên */
+    color: #fff; /* Màu chữ sáng */
+    padding: 20px; /* Khoảng cách xung quanh nội dung */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Đổ bóng để tạo hiệu ứng nổi */
+    overflow-y: auto; /* Cho phép cuộn dọc nếu nội dung vượt quá chiều cao */
+  }
+  
+  /* Căn chỉnh các tiêu đề */
+  .sidebar h3 {
+    font-size: 18px; /* Kích thước chữ */
+    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
+    font-weight: bold; /* Đặt độ đậm cho tiêu đề */
+  }
+  
+  /* Căn chỉnh danh sách */
+  .sidebar ul {
+    list-style: none; /* Loại bỏ dấu đầu dòng */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+  }
+  
+  /* Căn chỉnh các mục danh sách */
+  .sidebar li {
+    margin-bottom: 10px; /* Khoảng cách dưới mỗi mục */
+  }
+  
+  /* Căn chỉnh liên kết */
+  .sidebar a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #ddd; /* Màu chữ liên kết sáng hơn để nổi bật trên nền tối */
+    display: block; /* Để liên kết chiếm toàn bộ chiều rộng của mục */
+    padding: 10px; /* Khoảng cách bên trong liên kết */
+    border-radius: 4px; /* Bo góc để liên kết có hình dạng mềm mại */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi khi hover */
+  }
+  
+  .sidebar a:hover {
+    background-color: #555; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+  }
+  

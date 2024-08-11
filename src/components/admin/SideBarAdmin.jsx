@@ -21,10 +21,10 @@ const SideBarAdmin = () => {
           <h3>Nhân viên</h3>
           <ul>
             <li>
-              <Link to="/admin/v1/list-users">Danh sách nhân viên</Link>
+              <Link to="/admin/v1/list-employees">Danh sách nhân viên</Link>
             </li>
             <li>
-              <Link to="/admin/v1/list-users">Thêm mới nhân viên</Link>
+              <Link to="/admin/v1/add-employee">Thêm mới nhân viên</Link>
             </li>
           </ul>
         </div>

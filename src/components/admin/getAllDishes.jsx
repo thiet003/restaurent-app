@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
 import HeaderAdmin from "./Header";
+import SideBarAdmin from "./SideBarAdmin";
 // Đặt root element cho Modal
 Modal.setAppElement("#root");
-
 const DishesList = () => {
   const isAdmin = localStorage.getItem("role") === "admin" ? true : false;
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const DishesList = () => {
   const handleDelete = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_URL_API_ADMIN}/dishes/${dishToDelete.dish_id}`,
+        `${process.env.REACT_APP_URL_API_ADMIN}/employees/${dishToDelete.dish_id}`,
         {
           method: "DELETE",
         }
@@ -41,7 +41,9 @@ const DishesList = () => {
 
       // Xóa thành công, cần phải cập nhật danh sách món ăn
       closeModal();
-      window.location.reload();
+      console.log("Dish deleted successfully");
+      
+      // window.location.reload();
     } catch (error) {
       console.error("Error deleting dish:", error);
     }
@@ -88,7 +90,9 @@ const DishesList = () => {
   return (
     <div>
       <HeaderAdmin />
-      <div className="dishes-list-container">
+      <div className="admin-homepage">
+        <SideBarAdmin />
+        <div className="dishes-list-container">
         <h1>Danh sách các món ăn</h1>
         <div class="search-container">
           <div class="search-box">
@@ -188,6 +192,8 @@ const DishesList = () => {
           ))}
         </div>
       </div>
+      </div>
+      
     </div>
   );
 };

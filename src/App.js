@@ -7,6 +7,8 @@ import DetailDish from './components/admin/DetailDish.jsx';
 import Home from './components/client/Home.jsx';
 import EmployeeLogin from './components/admin/EmployeeLogin.jsx';
 import AdminHomePage from './components/admin/HomePage.jsx';
+import AddEmployee from './components/admin/AddEmployee.jsx';
+import ListEmployee from './components/admin/ListEmployee.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/admin/v1/detail-dish/:id" element={<DetailDish />} />
           
           <Route path="/admin/v1/login" element={<EmployeeLogin />} />
+          <Route path="/admin/v1/add-employee" element={<AddEmployee />} />
+          <Route path="/admin/v1/list-employees" element={<ListEmployee />} />
         </Routes>
       </div>
     </Router>

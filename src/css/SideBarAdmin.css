@@ -7,6 +7,8 @@
     padding: 20px; /* Khoảng cách xung quanh nội dung */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Đổ bóng để tạo hiệu ứng nổi */
     overflow-y: auto; /* Cho phép cuộn dọc nếu nội dung vượt quá chiều cao */
+    position: sticky;
+    top: 0;
   }
   
   /* Căn chỉnh các tiêu đề */

@@ -1,0 +1,99 @@
+.list-employees {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+.tbEmp {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.tbEmp  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Bảng */
+  .tbEmp  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tbEmp  table th,
+  .tbEmp  table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tbEmp  table th {
+    background-color: #343a40;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .tbEmp  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Nút bấm */
+  .tbEmp button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tbEmp  button:first-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .tbEmp button:first-child:hover {
+    background-color: #0056b3;
+  }
+  
+  .tbEmp button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .tbEmp button:last-child:hover {
+    background-color: #c82333;
+  }
+  .tbEmp table tr td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .search-employee {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .search-employee input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+  }
+  .search-employee button {
+    height: 35px;
+    margin-left: 10px;
+    padding: 1px 12px !important;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff !important;
+    color: white;
+  }

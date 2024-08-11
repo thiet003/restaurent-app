@@ -3,7 +3,8 @@ import { useNavigate, Link} from "react-router-dom";
 import '../../css/HeaderAdmin.css';
 const HeaderAdmin = () => {
     const navigate = useNavigate();
-    const [name, setName] = useState("");
+    const nameInLocalStorage = localStorage.getItem("name");
+    const [name, setName] = useState(nameInLocalStorage);
     useEffect(() => {
         if (localStorage.getItem("name")) {
             setName(localStorage.getItem("name"));

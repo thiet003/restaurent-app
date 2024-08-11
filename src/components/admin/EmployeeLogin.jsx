@@ -8,6 +8,8 @@ const EmployeeLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const apiUrl = `${process.env.REACT_APP_URL_API_ADMIN}/employees/login`;
+    // Xử lý khi hết hạn access token
+
     // Xử lý khi người dùng ấn nút Đăng nhập
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -31,9 +33,12 @@ const EmployeeLogin = () => {
                 
             }
             const data = await response.json();
-            console.log(data);
             // Lưu access token vào localStorage
-            localStorage.setItem("accessToken", data.accessToken);
+            const accessToken = data.accessToken;
+            const decodeToken = JSON.parse(atob(accessToken.split(".")[1]));
+            const expirateTime = decodeToken.exp * 1000;
+            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("expirateTime", expirateTime);
             localStorage.setItem("name", data.name);
             localStorage.setItem("role", data.role);
             toast.success("Đăng nhập thành công!");

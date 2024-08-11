@@ -1,9 +1,11 @@
 /* DishesList.css */
 .dishes-list-container {
+  flex-grow: 1;
   padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 100px;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .dishes-list-container h1 {
@@ -93,13 +95,15 @@
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 500px;
-  
+  max-width: 700px;
 }
 
 .search-button {
-  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 150px;
+  padding: 5px 10px;
   font-size: 16px;
+  height: 39px;
   color: #fff;
   background-color: #007bff;
   border: none;

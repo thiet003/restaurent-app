@@ -1,0 +1,97 @@
+/* Tổng quát */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .add-employee {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  
+  /* SideBarAdmin */
+  .add-employee > div:first-child {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Phần nội dung chính */
+  .add-employee > div:last-child {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .form-add {
+    padding: 10px 200px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .add-employee h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form */
+  .add-employee form {
+    min-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-employee form div {
+    margin-bottom: 15px;
+  }
+  
+  .add-employee label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: start;
+    margin-left: 15px;
+  }
+  
+  .add-employee input[type="text"],
+  .add-employee input[type="password"],
+  .add-employee select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .add-employee button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-employee button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  .add-employee p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .add-employee p[style*="red"] {
+    color: red;
+  }
+  
+  .add-employee p[style*="green"] {
+    color: green;
+  }
+  

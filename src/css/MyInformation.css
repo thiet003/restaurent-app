@@ -1,0 +1,88 @@
+/* Đặt background và định dạng cho toàn bộ form */
+.my-infor {
+    display: flex;
+}
+.my-infor-content {
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Định dạng tiêu đề */
+.my-infor-content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Định dạng cho form */
+.my-infor-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Định dạng ảnh đại diện */
+.my-infor-content img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 4px solid #007bff;
+}
+
+/* Định dạng cho các nhãn và input */
+.my-infor-content label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.my-infor-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Định dạng cho các nút bấm */
+.my-infor-content button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.my-infor-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Tạo khoảng cách giữa các nút bấm */
+.my-infor-content button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Tạo khoảng cách giữa các input và label */
+.my-infor-content div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Định dạng cho phần nút bấm */
+.my-infor-content div:last-child {
+    display: flex;
+    justify-content: center;
+}

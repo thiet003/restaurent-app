@@ -1,5 +1,9 @@
 /* EditDish.css */
-
+.update-dish {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
 .edit-dish-container {
   max-width: 800px;
   margin: 0 auto;
@@ -10,16 +14,21 @@
 form label {
   display: block;
   margin-bottom: 10px;
+  font-weight: 700;
+  text-align: start;
+  margin-left: 5px;
+  margin-bottom: 5x;
 }
 
-input[type="text"],
-textarea,
-input[type="number"] {
+.update-dish input[type="text"],
+.update-dish textarea,
+.update-dish input[type="number"] {
   width: 100%;
   padding: 8px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 textarea {

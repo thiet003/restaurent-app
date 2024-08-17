@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../css/CreateDish.css';
-
+import HeaderAdmin from './Header';
+import SideBarAdmin from './SideBarAdmin';
 const CreateDish = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -61,7 +62,11 @@ const CreateDish = () => {
   };
 
   return (
-    <div className="create-dish-container">
+    <div>
+      <HeaderAdmin/>
+      <div className='add-dish'>
+        <SideBarAdmin/>
+        <div className="create-dish-container">
       <h1>Thêm mới thực đơn</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -123,6 +128,9 @@ const CreateDish = () => {
         <button type="submit">Thêm món ăn</button>
       </form>
     </div>
+      </div>
+    </div>
+    
   );
 };
 

@@ -10,6 +10,8 @@ import AdminHomePage from './components/admin/HomePage.jsx';
 import AddEmployee from './components/admin/AddEmployee.jsx';
 import ListEmployee from './components/admin/ListEmployee.jsx';
 import UpdateEmployee from './components/admin/UpdateEmployee.jsx';
+import MyInformation from './components/admin/Information.jsx';
+import ChangePassword from './components/admin/ChangePassword.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/admin/v1/add-employee" element={<AddEmployee />} />
           <Route path="/admin/v1/list-employees" element={<ListEmployee />} />
           <Route path="/admin/v1/update-employee/:id" element={<UpdateEmployee />} />
+          <Route path="/admin/v1/infor" element={<MyInformation />} />
+          <Route path="/admin/v1/change-password" element={<ChangePassword />} />
         </Routes>
       </div>
     </Router>

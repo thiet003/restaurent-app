@@ -3,18 +3,22 @@ import {useNavigate } from "react-router-dom";
 import '../../css/EmployeeLogin.css';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { saveToken, isTokenExpired } from "../../configs/timeAccessToken";
+import { useEffect } from "react";
 const EmployeeLogin = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const apiUrl = `${process.env.REACT_APP_URL_API_ADMIN}/employees/login`;
-    // Xử lý khi hết hạn access token
-
     // Xử lý khi người dùng ấn nút Đăng nhập
+    useEffect(() => {
+        if (!isTokenExpired()) {
+            navigate("/admin/v1/");
+        }
+    }, [navigate]);
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!username || !password) {
-            console.log(2);
             toast.error("Vui lòng nhập tên đăng nhập và mật khẩu!");
             return;
         }
@@ -34,16 +38,10 @@ const EmployeeLogin = () => {
             }
             const data = await response.json();
             // Lưu access token vào localStorage
-            const accessToken = data.accessToken;
-            const decodeToken = JSON.parse(atob(accessToken.split(".")[1]));
-            const expirateTime = decodeToken.exp * 1000;
-            localStorage.setItem("accessToken", accessToken);
-            localStorage.setItem("expirateTime", expirateTime);
-            localStorage.setItem("name", data.name);
-            localStorage.setItem("role", data.role);
+            saveToken(data.accessToken, data.name, data.role);
             toast.success("Đăng nhập thành công!");
             // Chuyển hướng sang trang quản trị
-            navigate("/admin/v1/list-dishes");
+            navigate("/admin/v1/");
         } catch (error) {
             console.error("Error logging in:", error);
             toast.error(error.message);

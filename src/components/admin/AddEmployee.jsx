@@ -140,9 +140,9 @@ const AddEmployee = () => {
                     id=""
                     onChange={(e) => setPosition(e.target.value)}
                   >
-                    <option value="waiter">Phục vụ</option>
-                    <option value="chef">Đầu bếp</option>
-                    <option value="cashier">Thu ngân</option>
+                    <option value="Phục vụ">Phục vụ</option>
+                    <option value="Đầu bếp">Đầu bếp</option>
+                    <option value="Thu ngân">Thu ngân</option>
                   </select>
                 </div>
               )}
@@ -154,8 +154,8 @@ const AddEmployee = () => {
                     id=""
                     onChange={(e) => setPosition(e.target.value)}
                   >
-                    <option value="manager">Quản lý doanh thu</option>
-                    <option value="accountant">Quản lý nhân sự</option>
+                    <option value="Quản lý doanh thu">Quản lý doanh thu</option>
+                    <option value="Quản lý nhân sự">Quản lý nhân sự</option>
                   </select>
                 </div>
               )}

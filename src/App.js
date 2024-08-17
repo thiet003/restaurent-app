@@ -9,7 +9,9 @@ import EmployeeLogin from './components/admin/EmployeeLogin.jsx';
 import AdminHomePage from './components/admin/HomePage.jsx';
 import AddEmployee from './components/admin/AddEmployee.jsx';
 import ListEmployee from './components/admin/ListEmployee.jsx';
+import UpdateEmployee from './components/admin/UpdateEmployee.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
     <Router>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/admin/v1/login" element={<EmployeeLogin />} />
           <Route path="/admin/v1/add-employee" element={<AddEmployee />} />
           <Route path="/admin/v1/list-employees" element={<ListEmployee />} />
+          <Route path="/admin/v1/update-employee/:id" element={<UpdateEmployee />} />
         </Routes>
       </div>
     </Router>

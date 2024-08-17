@@ -5,6 +5,15 @@ import SideBarAdmin from "./SideBarAdmin";
 import '../../css/ListEmployee.css';
 import Modal from "react-modal";
 const ListEmployee = () => {
+    const roleDictAdmin = {
+        "manager": "Quản lý doanh thu",
+        "accountant": "Quản lý nhân sự"
+    }
+    const roleDictEmployee = {
+        "waiter": "Phục vụ",
+        "chef": "Đầu bếp",
+        "cashier": "Thu ngân"
+    }
     const expirateTime = localStorage.getItem("expirateTime");
     const currentTime = Date.now();
     const isAdmin = localStorage.getItem("role") === "admin" ? true : false;
@@ -127,11 +136,25 @@ const ListEmployee = () => {
                                         <td><img src={employee.avatar} alt="" /></td>
                                         <td>{employee.phone}</td>
                                         <td>{employee.username}</td>
-                                        <td>{employee.role}</td>
-                                        <td>{employee.position}</td>
+                                        {
+                                            employee.role === "admin" &&
+                                            <td>Quản trị viên</td>
+                                        }
+                                        {
+                                            employee.role === "employee" &&
+                                            <td>Nhân viên</td>
+                                        }
+                                        {
+                                            employee.role === "admin" &&
+                                            <td>{roleDictAdmin[employee.position]}</td>
+                                        }
+                                        {
+                                            employee.role === "employee" &&
+                                            <td>{roleDictEmployee[employee.position]}</td>
+                                        }
                                         {employee.role === "employee" &&
                                             <td>
-                                            <button>Sửa</button>
+                                            <button onClick={() => navigate(`/admin/v1/update-employee/${employee.employee_id}`)}>Sửa</button>
                                             <button onClick={() => openModal(employee)}>Xóa</button>
                                             </td>
                                         }

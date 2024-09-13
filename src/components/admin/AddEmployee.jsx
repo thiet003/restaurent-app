@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 const AddEmployee = () => {
+  const [x,setX] = useState("");
   const isAdmin = localStorage.getItem("role") === "admin" ? true : false;
   const navigate = useNavigate();
   const [name, setName] = useState("");
